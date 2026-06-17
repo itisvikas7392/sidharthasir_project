@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="se">
+        <select name="category" id="category" onchange="myFunction()">
+            <option value="Bca">BCA</option>
+            <option value="Mca">MCA</option>
+            <option value="BEd">B.Ed</option>
+            <option value="MEd">M.Ed</option>
+            <option value="BSc">B.Sc</option>
+            <option value="MSc">M.Sc</option>
+            <option value="BCom">B.Com</option>
+            <option value="MCom">M.Com</option>
+            <options value="BBA">BBA</option>
+            <option value="MBA">MBA</option>
+        </select>
+
+    </div>
+    <div class="area2">
+        <p id="sec">
+
+        </p>
+    </div>
+<script>
+ list = []
+
+
+    function myFunction() {
+        data = document.querySelector("#category option:checked").text;
+        console.log(data);
+        if (list.length < 5) {
+            list.push(data);
+            console.log(list);
+        }
+        else {
+            alert("You can select only 5 options");
+        }
+        document.querySelector("#sec").innerHTML = list;
+    }
+
+
+  
+</script>
+
+</body>
+</html>
