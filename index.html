@@ -35,10 +35,12 @@
         console.log(data);
         if (list.length < 5) {
             list.push(data);
-            console.log(list);
+           
         }
         else {
             alert("You can select only 5 options");
+            console.log(list);
+            
         }
         document.querySelector("#sec").innerHTML = list;
     }
